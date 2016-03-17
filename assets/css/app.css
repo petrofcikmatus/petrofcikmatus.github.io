@@ -201,27 +201,26 @@ body {
     background-color: #ffffff;
 }
 
-.section header,
-.section article {
-    margin: 20px 12px;
+.section {
+    padding: 20px auto;
 }
 
-.section header h1 {
+.section h1 {
     font-size: 32px;
-    margin: 20px 0;
+    margin: 20px 12px;
     line-height: 42px;
     font-weight: 400;
     color: #2d72d9;
 }
 
-.section article p {
-    margin: 15px 0;
+.section p {
+    margin: 15px 12px;
     font-size: 18px;
     line-height: 28px;
     text-align: justify;
 }
 
-.section article p a {
+.section p a {
     color: #205bb3;
 }
 
