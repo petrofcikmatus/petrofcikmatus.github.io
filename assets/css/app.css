@@ -1,0 +1,340 @@
+/* box-sizing: border-box */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* clearfix */
+.group:before,
+.group:after {
+    content: '';
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* hiding */
+.hidden {
+    display: none!important;
+}
+
+/* links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 300ms ease;
+}
+
+/* body */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eceef1;
+    color: #191919;
+}
+
+/* width wrapper */
+.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 768px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 992px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1200px;
+    }
+}
+
+/* nav */
+.nav {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #2d72d9;
+}
+
+.nav-group {
+    display: inline-block;
+    float: left;
+    margin: 12px;
+}
+.nav-group--right {
+    float: right;
+}
+
+.nav .logo {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 3px;
+    margin-right: 12px;
+    background: transparent url('../img/farebna-fotka.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.nav .menu {
+    display: block;
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 12px 0 0;
+}
+
+.nav .menu-item {
+    display: inline-block;
+    float: left;
+}
+
+.nav .menu-link {
+    display: block;
+    width: auto;
+    line-height: 36px;
+    height: 36px;
+    color: #eeeeee;
+    padding: 0 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+}
+.nav .menu-link:focus,
+.nav .menu-link:hover {
+    color: #ffffff;
+}
+
+.nav .btn {
+    display: block;
+    width: auto;
+    line-height: 36px;
+    height: 36px;
+    background-color: #205bb3;
+    color: #eeeeee;
+    padding: 0 12px;
+    margin-left: 12px;
+    border-radius: 3px;
+}
+.nav .btn:focus,
+.nav .btn:hover {
+    color: #ffffff;
+}
+
+/* header */
+.header {
+    background-color: #ffffff;
+    padding: 80px 0 20px;
+    text-align: center;
+}
+
+.header .image {
+    margin: 30px auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: url('../img/farebna-fotka.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.header h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 15px 0;
+}
+
+/* sections */
+.section {
+    position: relative; /* kvoli kotve */
+    padding: 20px 0;
+}
+
+.section .anchor {
+    position: absolute;
+    top: 0;
+    height: 0;
+    margin-top: -50px;
+    visibility: hidden;
+}
+
+.section--light {
+    background-color: #ffffff;
+}
+
+.section header,
+.section article {
+    margin: 20px 12px;
+}
+
+.section header h1 {
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 42px;
+    font-weight: 400;
+    color: #2d72d9;
+}
+
+.section article p {
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.section article p a {
+    color: #205bb3;
+}
+
+/* map */
+.map {
+    height: 300px;
+}
+
+.map iframe {
+    /*pointer-events: none;*/
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1a1a1a;
+}
+
+.footer a {
+    color: #205bb3;
+}
+
+/* overlay */
+.overlay-container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.overlay-content p {
+    margin: 15px 12px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+}
+
+/* loading :D */
+.loading-container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: white;
+}
+
+.loading-image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -116px;
+    left: 50%;
+    margin-left: -165px;
+    width: 350px;
+    height: 233px;
+    /*background-image: url('../img/loading.gif');*/
+}
+
+/* not found */
+.not-found__table {
+    position: absolute;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.not-found__tr {
+    display: table-row;
+}
+
+.not-found__td {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.not-found__td .image {
+    margin: 0 auto;
+    width: 350px;
+    height: 233px;
+}
+
+.not-found__td .image img {
+    width: 100%;
+    height: auto;
+}
+
+.not-found__td .title {
+    margin: 20px auto;
+    font-size: 36px;
+    font-weight: 700;
+}
