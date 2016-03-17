@@ -46,7 +46,7 @@
     <div class="wrapper group">
         <div class="nav-group">
             <div class="group">
-                <a href="index.html#" class="logo"></a>
+                <a href="#up" class="logo"></a>
                 <ul class="menu group">
                     <li class="menu-item"><a href="#kto-som" class="menu-link">Kto som</a></li>
                     <li class="menu-item"><a href="#co-robim" class="menu-link">Čo robím</a></li>
@@ -60,7 +60,7 @@
     </div>
 </nav>
 
-<header class="header">
+<header class="header" id="up">
     <div class="wrapper">
         <div class="image"></div>
         <h1>Matúš Petrofčík</h1>
@@ -251,6 +251,24 @@
     $(document).ready(function () {
         // hide charmander loading
         //$('.loading-container').fadeOut();
+
+        // smooth scroll
+        $('a[href^="#"]').on('click',function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing');
+
+            /*$('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });*/
+        });
 
         // set GA triggers
         $('.ga-mailto').on('click', function(){
