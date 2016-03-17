@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
 
     <meta name="description" content="Som študent a mal by som vedieť programovať.">
     <meta name="author" content="Matúš Petrofčík">
@@ -21,11 +20,7 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <noscript>
-        <style>
-            .loading-container {
-                display: none;
-            }
-        </style>
+        <style>.loading-container {display: none;}</style>
     </noscript>
 </head>
 <body>
@@ -252,7 +247,37 @@
     </div>
 </div>-->
 
-<script src="assets/js/app.js"></script>
+<script>
+    $(document).ready(function () {
+        // hide charmander loading
+        //$('.loading-container').fadeOut();
+
+        // set GA triggers
+        $('.ga-mailto').on('click', function(){
+            ga('send', 'event', 'link', 'mailto');
+        });
+
+        $('.ga-tel').on('click', function(){
+            ga('send', 'event', 'link', 'tel');
+        });
+
+        $('.ga-itnetwork.cz').on('click', function(){
+            ga('send', 'event', 'link', 'itnetwork.cz');
+        });
+
+        $('.ga-webissimo.sk').on('click', function(){
+            ga('send', 'event', 'link', 'webissimo.sk');
+        });
+
+        $('.ga-fvojtas.com').on('click', function(){
+            ga('send', 'event', 'link', 'fvojtas.com');
+        });
+
+        $('.ga-other').on('click', function(){
+            ga('send', 'event', 'link', 'other');
+        });
+    });
+</script>
 
 </body>
 </html>
