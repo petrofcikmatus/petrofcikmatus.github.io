@@ -236,13 +236,17 @@ body {
 /* footer */
 .footer {
     background-color: #ffffff;
-    padding: 20px 12px;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0 12px;
     font-size: 16px;
     line-height: 20px;
     color: #1a1a1a;
 }
 
-.footer a {
+.footer p a {
     color: #205bb3;
 }
 
