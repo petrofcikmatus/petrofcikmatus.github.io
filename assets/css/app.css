@@ -4,6 +4,7 @@ html {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
@@ -20,16 +21,13 @@ strong {
     content: '';
     display: table;
 }
+
 .group:after {
     clear: both;
 }
+
 .group {
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-
-/* hiding */
-.hidden {
-    display: none !important;
 }
 
 /* links */
@@ -96,6 +94,7 @@ body {
     float: left;
     margin: 12px;
 }
+
 .nav-group--right {
     float: right;
 }
@@ -134,6 +133,7 @@ body {
     margin-right: 6px;
     border-radius: 3px;
 }
+
 .nav .menu-link:focus,
 .nav .menu-link:hover {
     color: #ffffff;
@@ -150,6 +150,7 @@ body {
     margin-left: 12px;
     border-radius: 3px;
 }
+
 .nav .btn:focus,
 .nav .btn:hover {
     color: #ffffff;
@@ -185,16 +186,11 @@ body {
 
 /* sections */
 .section {
-    position: relative; /* kvoli kotve */
     padding: 20px 0;
 }
 
 .section--light {
     background-color: #ffffff;
-}
-
-.section {
-    padding: 20px auto;
 }
 
 .section h2 {
