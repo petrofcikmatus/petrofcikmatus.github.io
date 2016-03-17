@@ -231,7 +231,7 @@ body {
 }
 
 .map iframe {
-    /*pointer-events: none;*/
+    pointer-events: none;
 }
 
 .footer {
