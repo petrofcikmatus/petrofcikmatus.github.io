@@ -29,7 +29,7 @@ strong {
 
 /* hiding */
 .hidden {
-    display: none!important;
+    display: none !important;
 }
 
 /* links */
@@ -187,14 +187,6 @@ body {
 .section {
     position: relative; /* kvoli kotve */
     padding: 20px 0;
-}
-
-.section .anchor {
-    position: absolute;
-    top: 0;
-    height: 0;
-    margin-top: -50px;
-    visibility: hidden;
 }
 
 .section--light {
