@@ -46,7 +46,7 @@ body {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #eceef1;
     color: #191919;
 }
@@ -167,7 +167,7 @@ body {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    background: url('../img/matus-petrofcik-bw.jpg') no-repeat center center;
+    background: url('../img/matus-petrofcik-bw.jpg') no-repeat center;
     background-size: cover;
 }
 
