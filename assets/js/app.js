@@ -1,7 +1,7 @@
 (function (window, document, $, undefined) {
     $(document).ready(function () {
         // hide charmander loading
-        $('.loading-container').fadeOut();
+        //$('.loading-container').fadeOut();
 
         // set GA triggers
         $('.ga-mailto').on('click', function(){
