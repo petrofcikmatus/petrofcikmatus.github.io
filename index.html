@@ -22,18 +22,26 @@
 
 <nav class="nav">
     <div class="wrapper group">
-        <div class="nav-group">
+        <div class="nav__group">
             <div class="group">
                 <a href="#up" class="logo"></a>
-                <ul class="menu group">
-                    <li class="menu-item"><a href="#kto-som" class="menu-link">Kto som</a></li>
-                    <li class="menu-item"><a href="#co-robim" class="menu-link">Čo robím</a></li>
-                    <li class="menu-item"><a href="#co-ponukam" class="menu-link">Čo ponúkam</a></li>
-                </ul>
+
+                <div class="dropdown">
+                    <input class="dropdown__checkbox" type="checkbox" id="alfa">
+                    <label class="dropdown__label" for="alfa">Menu</label>
+                    <div class="dropdown__content">
+                        <div class="arrow"></div>
+                        <ul class="menu group">
+                            <li class="menu__item"><a href="#kto-som" class="menu__link">Kto som</a></li>
+                            <li class="menu__item"><a href="#co-robim" class="menu__link">Čo robím</a></li>
+                            <li class="menu__item"><a href="#co-ponukam" class="menu__link">Čo ponúkam</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="nav-group nav-group--right">
-            <a href="#kontaktuj-ma" class="btn">Kontakt? Kontakt!</a>
+        <div class="nav__group nav__group--right">
+            <a href="#kontaktuj-ma" class="btn">Kontaktuj ma!</a>
         </div>
     </div>
 </nav>
