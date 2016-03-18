@@ -16,10 +16,6 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-strong {
-    font-weight: 700;
-}
-
 /* clearfix */
 .group:before,
 .group:after {
@@ -33,13 +29,6 @@ strong {
 
 .group {
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-
-/* links */
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 300ms ease;
 }
 
 /* body */
@@ -237,10 +226,6 @@ body {
     text-align: justify;
 }
 
-.section__paragraph a {
-    color: #205bb3;
-}
-
 /* map */
 .map {
     height: 300px;
@@ -256,15 +241,11 @@ body {
     padding: 20px 0;
 }
 
-.footer p {
+.footer__text p {
     margin: 0 12px;
     font-size: 16px;
     line-height: 20px;
     color: #1a1a1a;
-}
-
-.footer p a {
-    color: #205bb3;
 }
 
 /* not found */
@@ -294,14 +275,32 @@ body {
     height: 233px;
 }
 
-.notFound__td__image img {
+.notFound__td__title {
+    margin: 20px auto;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 300ms ease;
+}
+
+.section__paragraph a,
+.footer__text a {
+    color: #205bb3;
+}
+
+/* img */
+img {
     width: 100%;
     height: auto;
 }
 
-.notFound__td__title {
-    margin: 20px auto;
-    font-size: 36px;
+/* strong */
+strong {
     font-weight: 700;
 }
 
