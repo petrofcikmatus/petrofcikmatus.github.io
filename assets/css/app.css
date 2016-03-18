@@ -192,7 +192,7 @@ body {
     text-align: center;
 }
 
-.header .image {
+.header__image {
     margin: 30px auto;
     width: 350px;
     height: 350px;
@@ -201,19 +201,19 @@ body {
     background-size: cover;
 }
 
-.header h1 {
+.header__title {
     font-size: 48px;
     font-weight: 400;
     margin: 15px 0;
 }
 
-.header h2 {
+.header__subtitle {
     font-size: 20px;
     line-height: 24px;
     margin: 15px 0;
 }
 
-/* sections */
+/* section */
 .section {
     padding: 20px 0;
 }
@@ -222,7 +222,7 @@ body {
     background-color: #ffffff;
 }
 
-.section h2 {
+.section__title {
     font-size: 32px;
     margin: 20px 12px;
     line-height: 42px;
@@ -230,14 +230,14 @@ body {
     color: #2d72d9;
 }
 
-.section p {
+.section__paragraph {
     margin: 15px 12px;
     font-size: 18px;
     line-height: 28px;
     text-align: justify;
 }
 
-.section p a {
+.section__paragraph a {
     color: #205bb3;
 }
 
@@ -268,7 +268,7 @@ body {
 }
 
 /* not found */
-.not-found__table {
+.notFound {
     position: absolute;
     display: table;
     top: 0;
@@ -278,28 +278,28 @@ body {
     background-color: #ffffff;
 }
 
-.not-found__tr {
+.notFound__tr {
     display: table-row;
 }
 
-.not-found__td {
+.notFound__td {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
 
-.not-found__td .image {
+.notFound__td__image {
     margin: 0 auto;
     width: 350px;
     height: 233px;
 }
 
-.not-found__td .image img {
+.notFound__td__image img {
     width: 100%;
     height: auto;
 }
 
-.not-found__td .title {
+.notFound__td__title {
     margin: 20px auto;
     font-size: 36px;
     font-weight: 700;
