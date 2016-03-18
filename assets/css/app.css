@@ -9,11 +9,11 @@ html {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
-}
 
-* {
-    -moz-font-smoothing: antialiased;
+    outline: none;
+
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 strong {
