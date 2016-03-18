@@ -169,7 +169,7 @@ body {
     background-color: #eceef1;
 }
 
-.nav .btn {
+.btn {
     display: block;
     width: auto;
     line-height: 36px;
@@ -180,8 +180,8 @@ body {
     border-radius: 3px;
 }
 
-.nav .btn:focus,
-.nav .btn:hover {
+.btn:focus,
+.btn:hover {
     color: #ffffff;
 }
 
