@@ -194,8 +194,8 @@ body {
 
 .header__image {
     margin: 30px auto;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background: url('../img/matus-petrofcik-bw.jpg') no-repeat center;
     background-size: cover;
@@ -349,6 +349,11 @@ body {
     .menu__link:hover {
         color: #ffffff;
         background-color: transparent;
+    }
+
+    .header__image {
+        width: 350px;
+        height: 350px;
     }
 }
 
