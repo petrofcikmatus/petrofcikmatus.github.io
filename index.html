@@ -56,7 +56,7 @@
 
 <section id="kto-som" class="section">
     <div class="wrapper">
-        <h2>V&nbsp;skratke o&nbsp;mne&hellip;</h2>
+        <h2>Niečo o&nbsp;mne&hellip;</h2>
         <p>
             Volám sa <strong>Matúš</strong>, mám <strong>24 rokov</strong> a&nbsp;pochádzam <strong>z&nbsp;<a class="ga-other" href="https://sk.wikipedia.org/wiki/Poprad">Popradu</a></strong>.
         </p>
@@ -75,7 +75,7 @@
 
 <section id="co-robim" class="section section--light">
     <div class="wrapper">
-        <h2>Čo to teda robím?</h2>
+        <h2>Čo to robím?</h2>
         <p>
             <strong>Tvorím weby.</strong>
         </p>
@@ -210,10 +210,10 @@
 
             var target = this.hash;
             var $target = $(target);
-            var $menu = $(".nav");
+            var $nav = $(".nav");
 
             $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - $menu.height()
+                'scrollTop': $target.offset().top - $nav.height()
             }, 900, 'swing');
 
             /*$('html, body').stop().animate({
@@ -267,5 +267,6 @@
     ga('create', 'UA-59470210-1', 'auto');
     ga('send', 'pageview');
 </script>
+
 </body>
 </html>

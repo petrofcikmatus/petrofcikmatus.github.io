@@ -103,8 +103,8 @@ body {
 
 .dropdown__label {
     display: inline-block;
-    line-height: 36px;
     height: 36px;
+    line-height: 36px;
     background-color: #205bb3;
     color: #eeeeee;
     padding: 0 12px;
@@ -157,6 +157,7 @@ body {
     display: block;
     padding: 0 12px;
     margin: 0;
+    height: 36px;
     line-height: 36px;
     color: #191919;
     white-space: nowrap;
