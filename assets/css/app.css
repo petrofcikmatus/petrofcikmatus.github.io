@@ -277,6 +277,10 @@ body {
     background-size: cover;
 }
 
+.notFound__image:hover {
+    transform: rotateY(180deg);;
+}
+
 .notFound__title {
     margin: 20px auto;
     font-size: 36px;
