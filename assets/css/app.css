@@ -226,19 +226,11 @@ body {
     text-align: justify;
 }
 
-/* map */
-.map {
-    height: 300px;
-}
-
-.map iframe {
-    pointer-events: none;
-}
-
 /* footer */
 .footer {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     padding: 20px 0;
+    border-bottom: 6px solid #2d72d9;
 }
 
 .footer__text {
