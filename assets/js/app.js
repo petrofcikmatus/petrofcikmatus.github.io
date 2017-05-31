@@ -10,4 +10,10 @@ $(document).ready(function () {
             'scrollTop': $target.offset().top - $nav.height()
         }, 900, 'swing');
     });
+
+    $('.section__paragraph').each(function (index, value) {
+        var str = $(this).html();
+        str = str.replace(/(\s|^)(a|i|k|o|s|u|v|z)(\s+)([^\p{Cc}\p{Cf}\p{zL}\p{Zp}]+)/gmi, '$1$2&nbsp;$4');
+        $(this).html(str);
+    });
 });
