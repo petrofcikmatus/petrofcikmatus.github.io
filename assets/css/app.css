@@ -231,7 +231,7 @@ body {
     color: #1a1a1a;
 }
 
-.notFound {
+.not-found {
     position: absolute;
     display: table;
     top: 0;
@@ -241,17 +241,17 @@ body {
     background-color: #ffffff;
 }
 
-.notFound__tr {
+.not-found__tr {
     display: table-row;
 }
 
-.notFound__td {
+.not-found__td {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
 
-.notFound__image {
+.not-found__image {
     margin: 0 auto;
     width: 350px;
     height: 233px;
@@ -259,7 +259,7 @@ body {
     background-size: cover;
 }
 
-.notFound__title {
+.not-found__title {
     margin: 20px auto;
     font-size: 36px;
     font-weight: 700;
