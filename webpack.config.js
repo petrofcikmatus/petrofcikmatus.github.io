@@ -1,14 +1,18 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const dist = __dirname + '/dist';
 
 module.exports = {
   entry: {
     bundle: __dirname + '/src/index.js'
   },
   output: {
-    path: __dirname + '/dist',
+    path: dist,
     filename: '[name].js'
   },
   plugins: [
+    new CleanWebpackPlugin([dist]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
