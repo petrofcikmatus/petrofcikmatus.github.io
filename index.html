@@ -28,11 +28,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <title>Matúš Petrofčík - Programátor webových aplikácií</title>
-
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin,latin-ext" rel="stylesheet"
-          type="text/css">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -45,7 +40,7 @@
                         <input class="dropdown__checkbox" type="checkbox" id="alfa">
                         <label class="dropdown__label" for="alfa">Menu</label>
                         <div class="dropdown__content">
-                            <div class="arrow"></div>
+                            <div class="dropdown__arrow-down"></div>
                             <ul class="menu group">
                                 <li class="menu__item"><a href="#who-am-i" class="menu__link">Kto som</a></li>
                                 <li class="menu__item"><a href="#what-i-do" class="menu__link">Čo robím</a></li>
@@ -64,7 +59,7 @@
         <div class="wrapper">
             <div class="header__image"></div>
             <h1 class="header__title">Matúš Petrofčík</h1>
-            <h2 class="header__subtitle">Programátor webových aplikácií</h2>
+            <div class="header__subtitle">Programátor webových aplikácií</div>
         </div>
     </header>
 
@@ -159,8 +154,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="dist/bundle.js"></script>
 
 </body>
 </html>
