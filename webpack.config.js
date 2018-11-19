@@ -26,9 +26,22 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'resolve-url-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sourceMapContents: false
+            }
+          },
         ]
       },
       {
@@ -41,6 +54,14 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        loader: 'file-loader',
+        options: {
+          path: 'fonts/',
+          name: '[name].[ext]'
+        }
       }
     ]
   }
