@@ -16,358 +16,361 @@ $light: #eeeeee;
 
 $transparent: transparent;
 
-html, body {
-    box-sizing: border-box;
+html,
+body {
+  box-sizing: border-box;
 }
 
 * {
-    &:before,
-    &:after {
-        box-sizing: inherit;
-        outline: none;
-    }
+  &:before,
+  &:after {
+    box-sizing: inherit;
+    outline: none;
+  }
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 16px;
-    font-weight: $font-weight-normal;
-    font-family: $font-family-stack;
-    background-color: $light;
-    color: $dark;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  font-family: $font-family-stack;
+  background-color: $light;
+  color: $dark;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 300ms ease;
+  text-decoration: none;
+  color: inherit;
+  transition: color 300ms ease;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .group {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
 
-    &:after {
-        clear: both;
-    }
+  &:after {
+    clear: both;
+  }
 }
 
 .wrapper {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 
-    @media (min-width: 768px) {
-        & {
-            max-width: 768px;
-        }
+  @media (min-width: 768px) {
+    & {
+      max-width: 768px;
     }
+  }
 
-    @media (min-width: 992px) {
-        & {
-            max-width: 992px;
-        }
+  @media (min-width: 992px) {
+    & {
+      max-width: 992px;
     }
+  }
 
-    @media (min-width: 1200px) {
-        & {
-            max-width: 1200px;
-        }
+  @media (min-width: 1200px) {
+    & {
+      max-width: 1200px;
     }
+  }
 }
 
 .nav {
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    width: 100%;
-    background-color: $primary;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: $primary;
 
-    &__group {
-        display: inline-block;
-        float: left;
-        margin: 12px;
+  &__group {
+    display: inline-block;
+    float: left;
+    margin: 12px;
 
-        &--right {
-            float: right;
-        }
+    &--right {
+      float: right;
     }
+  }
 }
 
 .logo {
-    display: block;
-    float: left;
-    width: 36px;
-    height: 36px;
-    border-radius: 3px;
-    margin-right: 12px;
-    background: $transparent url('../img/matus-petrofcik-36x36.jpg') no-repeat center;
-    background-size: cover;
+  display: block;
+  float: left;
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  margin-right: 12px;
+  background: $transparent url('../img/matus-petrofcik-36x36.jpg') no-repeat
+    center;
+  background-size: cover;
 }
 
 .dropdown {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
+  display: inline-block;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__label {
     display: inline-block;
-
-    &__checkbox {
-        display: none;
-    }
-
-    &__label {
-        display: inline-block;
-        height: 36px;
-        line-height: 36px;
-        background-color: #205bb3;
-        color: $light;
-        padding: 0 12px;
-        border-radius: 3px;
-        cursor: pointer;
-
-        @media (min-width: 768px) {
-            & {
-                display: none;
-            }
-        }
-    }
-
-    &__checkbox:checked + &__label {
-        color: $white;
-    }
-
-    &__content {
-        display: none;
-        position: absolute;
-        top: 36px;
-        left: 0;
-        padding: 0;
-        margin: 6px 0 0;
-
-        @media (min-width: 768px) {
-            & {
-                display: inline-block;
-                position: static;
-                float: left;
-                margin: 0;
-            }
-        }
-    }
-
-    &__checkbox:checked ~ &__content {
-        display: block;
-    }
-
-    &__arrow-down {
-        position: relative;
-        width: 0;
-        height: 0;
-        margin-left: 24px;
-        border-left: 6px solid $transparent;
-        border-right: 6px solid $transparent;
-        border-bottom: 6px solid $white;
-
-        @media (min-width: 768px) {
-            & {
-                display: none;
-            }
-        }
-    }
-}
-
-.menu {
-    list-style: none;
-    padding: 6px 0;
-    margin: 0;
-    background-color: $white;
-    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.11);
-    border-radius: 3px;
-
-    @media (min-width: 768px) {
-        & {
-            padding: 0;
-            background-color: $transparent;
-            box-shadow: none;
-        }
-    }
-
-    &__item {
-        display: block;
-
-        @media (min-width: 768px) {
-            & {
-                display: inline-block;
-                float: left;
-            }
-        }
-    }
-
-    &__link {
-        display: block;
-        padding: 0 12px;
-        margin: 0;
-        height: 36px;
-        line-height: 36px;
-        color: $dark;
-        white-space: nowrap;
-
-        &:focus,
-        &:hover {
-            color: $black;
-            background-color: $light;
-        }
-
-        @media (min-width: 768px) {
-            & {
-                margin-right: 6px;
-                color: $light;
-
-                &:focus,
-                &:hover {
-                    color: $white;
-                    background-color: $transparent;
-                }
-            }
-        }
-    }
-}
-
-.btn {
-    display: block;
-    width: auto;
-    line-height: 36px;
     height: 36px;
-    background-color: $secondary;
+    line-height: 36px;
+    background-color: #205bb3;
     color: $light;
     padding: 0 12px;
     border-radius: 3px;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &__checkbox:checked + &__label {
+    color: $white;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    padding: 0;
+    margin: 6px 0 0;
+
+    @media (min-width: 768px) {
+      & {
+        display: inline-block;
+        position: static;
+        float: left;
+        margin: 0;
+      }
+    }
+  }
+
+  &__checkbox:checked ~ &__content {
+    display: block;
+  }
+
+  &__arrow-down {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin-left: 24px;
+    border-left: 6px solid $transparent;
+    border-right: 6px solid $transparent;
+    border-bottom: 6px solid $white;
+
+    @media (min-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  background-color: $white;
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+
+  @media (min-width: 768px) {
+    & {
+      padding: 0;
+      background-color: $transparent;
+      box-shadow: none;
+    }
+  }
+
+  &__item {
+    display: block;
+
+    @media (min-width: 768px) {
+      & {
+        display: inline-block;
+        float: left;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0 12px;
+    margin: 0;
+    height: 36px;
+    line-height: 36px;
+    color: $dark;
+    white-space: nowrap;
 
     &:focus,
     &:hover {
-        color: $white;
+      color: $black;
+      background-color: $light;
     }
+
+    @media (min-width: 768px) {
+      & {
+        margin-right: 6px;
+        color: $light;
+
+        &:focus,
+        &:hover {
+          color: $white;
+          background-color: $transparent;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  width: auto;
+  line-height: 36px;
+  height: 36px;
+  background-color: $secondary;
+  color: $light;
+  padding: 0 12px;
+  border-radius: 3px;
+
+  &:focus,
+  &:hover {
+    color: $white;
+  }
 }
 
 .header {
-    background-color: $white;
-    padding: 80px 0 20px;
-    text-align: center;
+  background-color: $white;
+  padding: 80px 0 20px;
+  text-align: center;
 
-    &__image {
-        margin: 30px auto;
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        background: url('../img/matus-petrofcik-350x350.jpg') no-repeat center;
-        background-size: cover;
+  &__image {
+    margin: 30px auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url('../img/matus-petrofcik-350x350.jpg') no-repeat center;
+    background-size: cover;
 
-        @media (min-width: 768px) {
-            & {
-                width: 350px;
-                height: 350px;
-            }
-        }
+    @media (min-width: 768px) {
+      & {
+        width: 350px;
+        height: 350px;
+      }
     }
+  }
 
-    &__title {
-        font-size: 48px;
-        font-weight: $font-weight-normal;
-        margin: 15px 0;
-    }
+  &__title {
+    font-size: 48px;
+    font-weight: $font-weight-normal;
+    margin: 15px 0;
+  }
 
-    &__subtitle {
-        font-size: 20px;
-        font-weight: $font-weight-normal;
-        line-height: 24px;
-        margin: 15px 0;
-    }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: $font-weight-normal;
+    line-height: 24px;
+    margin: 15px 0;
+  }
 }
 
 .section {
-    padding: 20px 0;
+  padding: 20px 0;
 
-    &--light {
-        background-color: $white;
+  &--light {
+    background-color: $white;
+  }
+
+  &__title {
+    font-size: 32px;
+    margin: 20px 12px;
+    line-height: 42px;
+    font-weight: $font-weight-normal;
+    color: $primary;
+  }
+
+  &__paragraph {
+    margin: 15px 12px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+
+    a {
+      color: $secondary;
     }
-
-    &__title {
-        font-size: 32px;
-        margin: 20px 12px;
-        line-height: 42px;
-        font-weight: $font-weight-normal;
-        color: $primary;
-    }
-
-    &__paragraph {
-        margin: 15px 12px;
-        font-size: 18px;
-        line-height: 28px;
-        text-align: justify;
-
-        a {
-            color: $secondary;
-        }
-    }
+  }
 }
 
 .footer {
-    background-color: $white;
-    padding: 20px 0;
-    border-bottom: 6px solid $primary;
+  background-color: $white;
+  padding: 20px 0;
+  border-bottom: 6px solid $primary;
 
-    &__text {
-        margin: 0 12px;
-        font-size: 16px;
-        line-height: 20px;
-        color: #1a1a1a;
+  &__text {
+    margin: 0 12px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1a1a1a;
 
-        a {
-            color: $secondary;
-        }
+    a {
+      color: $secondary;
     }
+  }
 }
 
 .not-found {
-    position: absolute;
-    display: table;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $white;
+  position: absolute;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
 
-    &__tr {
-        display: table-row;
-    }
+  &__tr {
+    display: table-row;
+  }
 
-    &__td {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
+  &__td {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
 
-    &__image {
-        margin: 0 auto;
-        width: 350px;
-        height: 233px;
-        background: $transparent url('../img/pokemon-charmander.gif') no-repeat center;
-        background-size: cover;
-    }
+  &__image {
+    margin: 0 auto;
+    width: 350px;
+    height: 233px;
+    background: $transparent url('../img/pokemon-charmander.gif') no-repeat
+      center;
+    background-size: cover;
+  }
 
-    &__title {
-        margin: 20px auto;
-        font-size: 36px;
-        font-weight: $font-weight-bold;
-    }
+  &__title {
+    margin: 20px auto;
+    font-size: 36px;
+    font-weight: $font-weight-bold;
+  }
 }

@@ -5,18 +5,18 @@ const dist = __dirname + '/dist';
 
 module.exports = {
   entry: {
-    bundle: __dirname + '/src/index.js'
+    bundle: __dirname + '/src/index.js',
   },
   output: {
     path: dist,
-    filename: '[name].js'
+    filename: '[name].js',
   },
   plugins: [
     new CleanWebpackPlugin([dist]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
+      chunkFilename: '[id].css',
+    }),
   ],
   module: {
     rules: [
@@ -24,25 +24,25 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
-            loader: 'postcss-loader'
+            loader: 'postcss-loader',
           },
           {
-            loader: 'resolve-url-loader'
+            loader: 'resolve-url-loader',
           },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              sourceMapContents: false
-            }
+              sourceMapContents: false,
+            },
           },
-        ]
+        ],
       },
       {
         test: /\.jpg|gif$/,
@@ -51,18 +51,18 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8000, // Convert images < 8kb to base64 strings
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
       {
         test: /\.(woff2?|ttf|otf|eot|svg)$/,
         loader: 'file-loader',
         options: {
           path: 'fonts/',
-          name: '[name].[ext]'
-        }
-      }
-    ]
-  }
+          name: '[name].[ext]',
+        },
+      },
+    ],
+  },
 };
